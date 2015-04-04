@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataConfig>
+	<dataSource driver="com.mysql.jdbc.Driver" password="jesus"
+		type="JdbcDataSource"
+		url="jdbc:mysql://localhost:3306/multisearch?autoReconnect=true&amp;sessionVariables=storage_engine=InnoDB&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+		user="root" />
+	<document>
+		<entity name="chartsearch"
+			query="SELECT name AS cc_name, filter_query AS cc_filter_query, description AS cc_description FROM multisearch.chartsearch_categories"
+
+			deltaImportQuery="SELECT name AS cc_name, filter_query AS cc_filter_query, description AS cc_description FROM multisearch.chartsearch_categories"
+
+			deltaQuery="SELECT name AS cc_name, filter_query AS cc_filter_query, description AS cc_description FROM multisearch.chartsearch_categories"
+
+			deletedPkQuery="SELECT name AS cc_name, filter_query AS cc_filter_query, description AS cc_description FROM multisearch.chartsearch_categories">
+		</entity>
+	</document>
+</dataConfig>
