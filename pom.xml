@@ -5,8 +5,13 @@
 	<artifactId>multisearch</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>multisearch Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<name>Multi Search Web App</name>
+	<developers>
+		<developer>
+			<name>k-joseph</name>
+		</developer>
+	</developers>
+	<url>https://k2013joseph.wordpress.com/2015/04/04/multi-search-for-databases-and-documents/</url>
 
 
 	<properties>
