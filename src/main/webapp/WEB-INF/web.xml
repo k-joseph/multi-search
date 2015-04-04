@@ -5,7 +5,7 @@
 	id="WebApp_ID" version="3.0">
 
 
-	<display-name>Archetype Created Web Application</display-name>
+	<display-name>Multi-Search</display-name>
 
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>

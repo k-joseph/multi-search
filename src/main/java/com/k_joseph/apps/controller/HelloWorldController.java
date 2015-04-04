@@ -20,4 +20,11 @@ public class HelloWorldController {
 		mv.addObject("name", name);
 		return mv;
 	}
+	
+	@RequestMapping("/launchHello")
+	public ModelAndView loadHelloPage() {
+		ModelAndView mv = new ModelAndView("launchHello");
+		
+		return mv;
+	}
 }
