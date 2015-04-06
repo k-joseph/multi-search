@@ -8,9 +8,8 @@
 <title><spring:message code="multisearch.index.title"></spring:message></title>
 </head>
 <body>
-	<center>
-		<%@ include file="WEB-INF/views/redirectToInstaller.jsp"%>
+	<%@ include file="WEB-INF/views/redirectToInstallerIfNot.jsp"%>
 
-	</center>
+	<center></center>
 </body>
 </html>

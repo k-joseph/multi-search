@@ -12,6 +12,9 @@ import com.k_joseph.apps.multisearch.api.MultiSearchService;
 import com.k_joseph.apps.multisearch.solr.SearchProject;
 import com.k_joseph.apps.multisearch.solrServer.EmbeddedSolrServerPropertiesInitializer;
 
+/**
+ * Handles all DAO functions
+ */
 public class MultiSearchServiceImpl implements MultiSearchService {
 	
 	static Transaction transaction;

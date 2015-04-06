@@ -17,9 +17,9 @@
 	<properties>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<hibernate.version>4.3.5.Final</hibernate.version>
-		<liquibase.version>3.3.2</liquibase.version>
 	</properties>
 	<dependencies>
+
 
 		<!-- J-Unit -->
 		<dependency>
@@ -48,9 +48,9 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-orm</artifactId>
-		    <version>${spring.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -59,12 +59,14 @@
 			<version>1.7.10</version>
 		</dependency>
 
+
 		<!-- commons -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>1.4</version>
 		</dependency>
+
 
 		<!-- json -->
 		<dependency>
@@ -73,6 +75,7 @@
 			<version>2.4</version>
 			<classifier>jdk15</classifier>
 		</dependency>
+
 
 		<!-- Hibernate -->
 		<dependency>
@@ -86,20 +89,21 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
+
+		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 		</dependency>
 
-
-		<!-- Liquibase -->
 		<dependency>
-			<groupId>org.liquibase</groupId>
-			<artifactId>liquibase-core</artifactId>
-			<version>${liquibase.version}</version>
+			<groupId>org.apache.ibatis</groupId>
+			<artifactId>ibatis-core</artifactId>
+			<version>3.0</version>
 		</dependency>
-
+		
+		
 		<!-- Solr -->
 		<dependency>
 			<groupId>org.apache.solr</groupId>

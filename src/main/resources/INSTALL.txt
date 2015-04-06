@@ -1,6 +1,0 @@
------------------------------------------------
-| Installation of Multi-Search Web Application|
------------------------------------------------
-
-+ Download the war file of source-code
-+ Compile the souce-code and/or deploy the war file in a web container like tomcat

@@ -35,7 +35,6 @@ public class HibernateUtil {
 			
 		}
 		catch (Throwable ex) {
-			// Log exception!
 			throw new ExceptionInInitializerError(ex);
 		}
 		return sessionFactory;
