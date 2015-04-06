@@ -1,4 +1,4 @@
-package com.k_joseph.apps.solrServer;
+package com.k_joseph.apps.multisearch.solrServer;
 
 public class MultiSearchHome {
 	

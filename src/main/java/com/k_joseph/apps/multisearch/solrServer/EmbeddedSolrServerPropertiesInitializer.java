@@ -1,4 +1,4 @@
-package com.k_joseph.apps.solrServer;
+package com.k_joseph.apps.multisearch.solrServer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,22 +15,27 @@ import org.springframework.util.StringUtils;
 
 public class EmbeddedSolrServerPropertiesInitializer {
 	
-	private static String propsFilePath;
+	private static String propsFilePath = System.getProperty("user.home") + File.separator + ".multi-search"
+	        + File.separator + "multisearch.properties";
 	
 	public EmbeddedSolrServerPropertiesInitializer(String solrHomePath, String dbUrl, String dbUser, String dbPassword) {
-		EmbeddedSolrServerPropertiesInitializer.propsFilePath = solrHomePath + File.separator + "multisearch.properties";
 		createPropertiesFile(solrHomePath, dbUrl, dbUser, dbPassword);
 	}
 	
 	public String createPropertiesFile(String solrHomePath, String dbUrl, String dbUser, String dbPassword) {
-		if (!StringUtils.isEmpty(solrHomePath) && !StringUtils.isEmpty(dbUrl) && !StringUtils.isEmpty(dbUser)
-		        && !StringUtils.isEmpty(dbPassword)) {
+		if (!StringUtils.isEmpty(solrHomePath) && !StringUtils.isEmpty(dbUrl) && !StringUtils.isEmpty(dbUser)) {
 			File solrHome = new File(solrHomePath);
+			
+			if (StringUtils.isEmpty(dbPassword)) {
+				dbPassword = "<=None";
+			}
+			
 			String content = "#The content of this file are used by multi search application.\n\nconnection.url=>" + dbUrl
 			        + "\nconnection.username=>" + dbUser + "\nconnection.password=>" + dbPassword;
 			if (!solrHome.exists()) {
 				solrHome.mkdir();
 			}
+			
 			File props = new File(propsFilePath);
 			FileWriter fw;
 			try {
@@ -75,7 +80,10 @@ public class EmbeddedSolrServerPropertiesInitializer {
 					user = linephrases.get(1);
 				}
 				if (line.startsWith("connection.password=>")) {
-					pswd = linephrases.get(1);
+					if (line.endsWith("=><=None")) {
+						pswd = "";
+					} else
+						pswd = linephrases.get(1);
 				}
 			}
 			fileReader.close();
@@ -84,12 +92,13 @@ public class EmbeddedSolrServerPropertiesInitializer {
 			e.printStackTrace();
 		}
 		
-		if (!StringUtils.isEmpty(url) && !StringUtils.isEmpty(user) && !StringUtils.isEmpty(pswd)) {
+		if (!StringUtils.isEmpty(url) && !StringUtils.isEmpty(user) && null != pswd) {
 			json = new JSONObject();
 			
 			json.put("connection.url", url);
 			json.put("connection.user", user);
 			json.put("connection.password", pswd);
+			json.put("pathToPropsFile", propsFilePath);
 		}
 		return json;
 	}

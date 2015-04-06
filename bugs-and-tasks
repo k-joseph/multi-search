@@ -8,4 +8,4 @@ BUGS:
 
 
 TASKS:
- + 
+ + Remove most jars like Liquibase etc, to resize the war file

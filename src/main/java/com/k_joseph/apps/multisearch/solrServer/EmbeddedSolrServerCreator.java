@@ -1,4 +1,4 @@
-package com.k_joseph.apps.solrServer;
+package com.k_joseph.apps.multisearch.solrServer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,10 +26,10 @@ public class EmbeddedSolrServerCreator {
 	
 	private SolrServer solrServer;
 	
-	private final EmbeddedSolrProperties properties;
+	public static EmbeddedSolrProperties properties;
 	
 	public EmbeddedSolrServerCreator(EmbeddedSolrProperties properties) {
-		this.properties = properties;
+		EmbeddedSolrServerCreator.properties = properties;
 	}
 	
 	public SolrServer createSolrServer() {

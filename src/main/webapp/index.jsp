@@ -8,10 +8,9 @@
 <title><spring:message code="multisearch.index.title"></spring:message></title>
 </head>
 <body>
-
 	<center>
-		<h2>Welcome to Multi-Search tool</h2>
-		<a href="launchHello">Launch Spring MVC Hello World</a>
+		<%@ include file="WEB-INF/views/redirectToInstaller.jsp"%>
+
 	</center>
 </body>
 </html>

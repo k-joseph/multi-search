@@ -1,4 +1,4 @@
-package com.k_joseph.apps.controller;
+package com.k_joseph.apps.multisearch.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

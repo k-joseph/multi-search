@@ -1,4 +1,4 @@
-package com.k_joseph.apps.solrServer;
+package com.k_joseph.apps.multisearch.solrServer;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +8,10 @@ import org.apache.solr.client.solrj.SolrServer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.k_joseph.apps.multisearch.solrServer.EmbeddedSolrServerPropertiesInitializer;
+import com.k_joseph.apps.multisearch.solrServer.MultiSearchHome;
+import com.k_joseph.apps.multisearch.solrServer.SolrServerSingleton;
 
 public class EmbeddedSolrServerCreatorTest {
 	
