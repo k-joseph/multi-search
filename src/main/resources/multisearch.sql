@@ -38,10 +38,10 @@ CREATE TABLE IF NOT EXISTS `multisearch_project` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `multisearch_project`
+-- Dumping data for table `multisearch_project` .Ignore by passes all duplicates
 --
 
-INSERT INTO `multisearch_project` (`project_id`, `name`, `description`, `uuid`, `sql_query`, `field_names`, `fields_exist_in_schema`, `db_name`, `db_user`, `db_user_password`, `server_name`, `dbms`, `port_number`) VALUES
+INSERT IGNORE INTO `multisearch_project` (`project_id`, `name`, `description`, `uuid`, `sql_query`, `field_names`, `fields_exist_in_schema`, `db_name`, `db_user`, `db_user_password`, `server_name`, `dbms`, `port_number`) VALUES
 (1, 'Chart Search', NULL, '66f0081c-93e9-4c54-ad73-caf34b104a9c', 'SELECT name AS cc_name, filter_query AS cc_filter_query, description AS cc_description FROM chartsearch_categories', 'cc_name, cc_filter_query, cc_description', 1, 'multisearch', NULL, NULL, NULL, NULL, NULL);
 
 
@@ -59,10 +59,10 @@ CREATE TABLE IF NOT EXISTS `multisearch_categories` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `multisearch_categories`
+-- Dumping data for table `multisearch_categories` .Ignore by passes all duplicates
 --
 
-INSERT INTO `multisearch_categories` (`category_id`, `name`, `filter_query`, `description`, `uuid`) VALUES
+INSERT IGNORE INTO `multisearch_categories` (`category_id`, `name`, `filter_query`, `description`, `uuid`) VALUES
 (1, 'Test', 'concept_class_name:Test', 'Category item for filtering Test', '3918-2910-4245-84f4-a9f38648ac60'),
 (2, 'Procedure', 'concept_class_name:Procedure', 'Category item for filtering Procedure', '66b0e726-a280-4d42-ada3-42bc111f68d6'),
 (3, 'Drug', 'concept_class_name:Drug', 'Category item for filtering Drug', '35cdafb5-5f6b-4c79-89e4-7226bea70ba9'),

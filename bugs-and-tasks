@@ -8,4 +8,10 @@ BUGS:
 
 
 TASKS:
- + Remove most jars like Liquibase etc, to resize the war file
+ + Remove most jars like Liquibase etc, to resize the war file, support running db changes by sql source file
+ + Support validation of checking project name and column names existence on  the indexing and saving new search project page forms
+ + Add a way of deleting search project, removing solr fields and clearing it's index
+ + Support importing an sql source file to add database to the server, to avoid user messing up other databases in sql source file, 
+   check for no existance of USE db, DROP db in source file, provide a way of creating db from the app and using it automatically, 
+   and then run the sql source file against the new database
+ + 

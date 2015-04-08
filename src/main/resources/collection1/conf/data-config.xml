@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataConfig>
-	<dataSource driver="com.mysql.jdbc.Driver" password="jesus"
+	<dataSource driver="com.mysql.jdbc.Driver" password="test"
 		type="JdbcDataSource"
 		url="jdbc:mysql://localhost:3306/multisearch?autoReconnect=true&amp;sessionVariables=storage_engine=InnoDB&amp;useUnicode=true&amp;characterEncoding=UTF-8"
 		user="root" />

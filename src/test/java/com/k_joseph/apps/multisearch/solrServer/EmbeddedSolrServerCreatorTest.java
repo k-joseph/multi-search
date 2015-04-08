@@ -7,12 +7,14 @@ import org.apache.commons.io.FileUtils;
 import org.apache.solr.client.solrj.SolrServer;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
-import com.k_joseph.apps.multisearch.solrServer.EmbeddedSolrServerPropertiesInitializer;
-import com.k_joseph.apps.multisearch.solrServer.MultiSearchHome;
-import com.k_joseph.apps.multisearch.solrServer.SolrServerSingleton;
-
+/**
+ * Runs properly, Ignored because it has real effects to the current instance; It can be removed for
+ * test purposes whenever needed
+ */
+@Ignore
 public class EmbeddedSolrServerCreatorTest {
 	
 	EmbeddedSolrServerPropertiesInitializer solrServerInit;

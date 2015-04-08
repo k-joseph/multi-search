@@ -8,16 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 import com.k_joseph.apps.multisearch.installer.RunInstaller;
 
 @Controller
-@RequestMapping(value = "/index.jsp")
+@RequestMapping(value = "/")
+/*
+ * TODO this class is not working yet, fails to get the index mapping; look into fixing it
+ */
 public class IndexController {
 	
-	@RequestMapping(value = "/index.jsp", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView generateIndexPage() {
 		ModelAndView modelAndView = new ModelAndView("/");
 		RunInstaller inst = new RunInstaller();
 		
 		if (inst.checkWhetherInstalled()) {
-			modelAndView.addObject("installedAlready", "yess");
+			modelAndView.addObject("installedAlready", inst.checkWhetherInstalled());
 		}
 		return modelAndView;
 	}

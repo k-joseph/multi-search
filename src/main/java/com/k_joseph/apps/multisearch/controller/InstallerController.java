@@ -25,7 +25,7 @@ public class InstallerController {
 		if (alreadyRanInstaller) {
 			mv = new ModelAndView(new RedirectView("/multisearch"));
 		} else {
-			mv = new ModelAndView("installer");
+			mv = new ModelAndView("/installer");
 		}
 		
 		return mv;

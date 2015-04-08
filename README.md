@@ -7,7 +7,7 @@ Is a Project that provides ability for searching both databases data and web doc
 | Installation of Multi-Search Web Application|
 -----------------------------------------
 
-+ Download the war file or source-code
++ Download the war file or
 + Compile the souce-code and/or deploy the war file in a web container like tomcat
 
 
